@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عمرو الزايغ - معرض الأعمال</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll Progress + Top Button -->
+  <div class="progress-circle" id="scrollProgress"></div>
+  <button id="scrollTopBtn" class="scroll-top">↑</button>
+
+  <!-- Navbar Section -->
+  <nav id="navbar">
+    <div class="logo">عمرو الزايغ</div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">الرئيسية</a></li>
+      <li><a href="#about" class="nav-link">من أنا</a></li>
+      <li><a href="#skills" class="nav-link">المهارات</a></li>
+      <li><a href="#education" class="nav-link">المؤهل</a></li>
+      <li><a href="#projects" class="nav-link">المشاريع</a></li>
+      <li><a href="#testimonials" class="nav-link">العملاء</a></li>
+      <li><a href="#contact" class="nav-link">تواصل</a></li>
+    </ul>
+    <button id="themeToggle">🌓</button>
+  </nav>
+
+  <!-- Header Section -->
+  <section id="home" class="header">
+    <div class="header-container">
+      <div class="left">
+        <h1>عمرو الزايغ</h1>
+        <h2>
+          <span id="typewriter"></span><span class="cursor">|</span>
+        </h2>
+      </div>
+      <div class="right">
+        <img src="images/images.jpg" alt="My Avatar" class="avatar" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <img src="images/images.jpg" alt="My Avatar" class="about-avatar">
+      <div class="about-text">
+        <h2>من أنا</h2>
+        <p id="bio">
+          أنا عمرو الزايغ، مطور واجهات أمامية ومهتم بتقنيات الويب الحديثة وتطوير تطبيقات المستخدم<span
+            id="dots">...</span>
+          <span id="more">
+            أحب بناء مشاريع تفاعلية وسريعة الاستجابة وأطمح إلى تطوير نفسي دائمًا في مجالات UI/UX، JavaScript، والبرمجة
+            المتقدمة. كما أستمتع بحل المشكلات وتحسين تجربة المستخدم.
+          </span>
+        </p>
+        <button onclick="toggleReadMore()" id="readBtn">اقرأ المزيد</button>
+        <br><br>
+        <a href="resume.pdf" download id="resumeBtn">تحميل السيرة الذاتية</a>
+        <p id="resumeMessage" class="hidden-message"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-container">
+    <h2>مهاراتي</h2>
+    <div class="skill">
+      <label>HTML</label>
+      <div class="progress-bar" data-value="95">
+        <div class="fill"></div>
+        <span class="tooltip">95%</span>
+      </div>
+    </div>
+    <div class="skill">
+      <label>CSS</label>
+      <div class="progress-bar" data-value="90">
+        <div class="fill"></div>
+        <span class="tooltip">90%</span>
+      </div>
+    </div>
+    <div class="skill">
+      <label>JavaScript</label>
+      <div class="progress-bar" data-value="85">
+        <div class="fill"></div>
+        <span class="tooltip">85%</span>
+      </div>
+    </div>
+    <div class="skill">
+      <label>UI/UX</label>
+      <div class="progress-bar" data-value="75">
+        <div class="fill"></div>
+        <span class="tooltip">75%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Experience Section -->
+  <section id="education" class="timeline-section">
+    <h2>التعليم والخبرة</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2025 - بكالوريوس تطوير برمجيات </h3>
+          <p>تخرج من الجامعة الإسلامية - غزة، بمعدل متميز، مع التركيز على تطوير تطبيقات الويب</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2024 - تدريب في شركة تقنية</h3>
+          <p> Agile ضمن فريق HTML, CSS, JavaScript قمت بتطوير واجهات أمامية باستخدام </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>2023 - مشاريع جامعية</h3>
+          <p>تم تنفيذ عدة مشاريع تفاعلية باستخدام تقنيات حديثة في البرمجة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2>مشاريعي</h2>
+    <div class="projects-grid">
+      <!-- المشروع 1 -->
+      <div class="project-card">
+        <img src="images/htmlcss.png.png" alt="مشروع 1">
+        <div class="project-info">
+          <h3>موقع تعليمي</h3>
+          <p>موقع لتعليم HTML وCSS بطريقة تفاعلية</p>
+          <div class="tech-stack">HTML, CSS</div>
+        </div>
+      </div>
+
+      <!-- المشروع 2 -->
+      <div class="project-card">
+        <img src="images/download.jpg" alt="مشروع 2">
+        <div class="project-info">
+          <h3>تطبيق مهام</h3>
+          <p>تطبيق لإدارة المهام اليومية</p>
+          <div class="tech-stack">React, Firebase</div>
+        </div>
+      </div>
+
+      <!-- المشروع 3 -->
+      <div class="project-card">
+        <img src="images/متجر-إلكتروني-مجاني-3.jpg" alt="مشروع 3">
+        <div class="project-info">
+          <h3>متجر إلكتروني</h3>
+          <p>متجر لبيع المنتجات الإلكترونية</p>
+          <div class="tech-stack">Vue.js, Node.js</div>
+        </div>
+      </div>
+
+      <!-- المشروع 4 -->
+      <div class="project-card">
+        <img src="images/منصة مدونات.jpg" alt="مشروع 4">
+        <div class="project-info">
+          <h3>منصة مدونات</h3>
+          <p>منصة لنشر المقالات والمدونات</p>
+          <div class="tech-stack">Django, Python</div>
+        </div>
+      </div>
+
+      <!-- المشروع 5 -->
+      <div class="project-card">
+        <img src="images/تطبيق طقس.jpg" alt="مشروع 5">
+        <div class="project-info">
+          <h3>تطبيق الطقس</h3>
+          <p>تطبيق لعرض حالة الطقس</p>
+          <div class="tech-stack">React Native, API</div>
+        </div>
+      </div>
+
+      <!-- المشروع 6 -->
+      <div class="project-card">
+        <img src="images/انشاء-موقع-شخصي.webp" alt="مشروع 6">
+        <div class="project-info">
+          <h3>موقع شخصي</h3>
+          <p>موقع شخصي لعرض الأعمال</p>
+          <div class="tech-stack">HTML, CSS, JS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <h2>آراء العملاء</h2>
+    <div class="testimonial-slider">
+      <button class="nav left" onclick="slide(-1)">&#10094;</button>
+      <div class="testimonial-track" id="testimonialTrack">
+      </div>
+      <button class="nav right" onclick="slide(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>تواصل معي</h2>
+    <form id="contactForm" novalidate>
+      <div class="form-group">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" />
+        <small class="error" id="nameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" />
+        <small class="error" id="emailError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="message">الرسالة:</label>
+        <textarea id="message" name="message" maxlength="500"></textarea>
+        <div id="charCount">0 / 500</div>
+        <small class="error" id="messageError"></small>
+      </div>
+
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><img src="images/2023_Facebook_icon.svg.png" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter-logo-2.svg" alt="Twitter"></a>
+      <a href="#"><img src="images/LinkedIn_icon.svg.webp" alt="LinkedIn"></a>
+    </div>
+    <div class="quick-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من أنا</a>
+      <a href="#projects">مشاريعي</a>
+      <a href="#contact">تواصل</a>
+    </div>
+    <p>&copy; <span id="year"></span> عمرو الزايغ. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
